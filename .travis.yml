@@ -13,7 +13,8 @@ android:
     - tools
     - platform-tools
 
-    # SDK version to compile project
+    - build-tools-28.0.3
+
     - android-28
 
 script: ./gradlew test
