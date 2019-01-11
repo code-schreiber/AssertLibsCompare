@@ -1,12 +1,11 @@
 [![Kotlin](https://img.shields.io/badge/Kotlin-Yes%20Please-BB42B0.svg)]()
 [![Author](https://img.shields.io/badge/Author-code--schreiber-1A237E.svg)](https://github.com/code-schreiber)
 [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)  
-[![Coverage Status](https://coveralls.io/repos/github/code-schreiber/AssertLibsCompare/badge.svg?branch=master)](https://coveralls.io/github/code-schreiber/AssertLibsCompare?branch=master)  
 
 <p align="center">
- <b>AssertLibsCompare</b>
+ <b>✅ AssertLibsCompare ❌</b>
  <br>
- ✅ Assertion libraries comparison for Kotlin in Android ❌
+ Assertion libraries comparison for Kotlin in Android
 </p>
 
 
@@ -18,4 +17,4 @@ Compared libraries:
  - [assertk](https://github.com/willowtreeapps/assertk/)
  - [Strikt](https://github.com/robfletcher/strikt/)
 
-See failing tests output from the different libraries here: [![Build Status](https://travis-ci.org/code-schreiber/AssertLibsCompare.svg?branch=master)](https://travis-ci.org/code-schreiber/AssertLibsCompare)
+See failing tests output from the different libraries here [![Build Status](https://travis-ci.org/code-schreiber/AssertLibsCompare.svg?branch=master)](https://travis-ci.org/code-schreiber/AssertLibsCompare)
