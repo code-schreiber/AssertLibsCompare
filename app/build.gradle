@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.adarshr.test-logger'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.toolslab.assertlibscompare"
+        minSdkVersion 28
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+testlogger {
+    theme 'mocha'
+}
+
+dependencies {
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    testImplementation 'junit:junit:4.12'
+    testImplementation "org.assertj:assertj-core:3.11.1"
+    testImplementation 'io.kotlintest:kotlintest-runner-junit5:3.1.11'
+    testImplementation 'org.amshove.kluent:kluent-android:1.35'
+    testImplementation 'com.willowtreeapps.assertk:assertk-jvm:0.12'
+    testImplementation "io.strikt:strikt-core:0.17.1"
+    testImplementation "io.mockk:mockk:1.9"
+}
