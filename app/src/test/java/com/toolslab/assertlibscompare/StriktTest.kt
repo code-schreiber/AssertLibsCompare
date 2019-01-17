@@ -134,6 +134,18 @@ class StriktTest {
     }
 
     @Test
+    fun equalListsWithDifferentOrder() {
+        val expected = listOf(
+            DataClass("a second string"),
+            DataClass("a first string")
+        )
+
+        val actual = underTest.aList()
+
+        expectThat(actual).isEqualTo(expected)
+    }
+
+    @Test
     fun notNullObject() {
         val actual = underTest.aNullableObject()
 

@@ -135,6 +135,18 @@ class AssertkTest {
     }
 
     @Test
+    fun equalListsWithDifferentOrder() {
+        val expected = listOf(
+            DataClass("a second string"),
+            DataClass("a first string")
+        )
+
+        val actual = underTest.aList()
+
+        assert(actual).isEqualTo(expected)
+    }
+
+    @Test
     fun notNullObject() {
         val actual = underTest.aNullableObject()
 

@@ -137,6 +137,18 @@ class KluentTest {
     }
 
     @Test
+    fun equalListsWithDifferentOrder() {
+        val expected = listOf(
+            DataClass("a second string"),
+            DataClass("a first string")
+        )
+
+        val actual = underTest.aList()
+
+        actual shouldEqual expected
+    }
+
+    @Test
     fun notNullObject() {
         val actual = underTest.aNullableObject()
 
