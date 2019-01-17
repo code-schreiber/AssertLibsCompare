@@ -17,6 +17,13 @@ class AssertjTest {
     }
 
     @Test
+    fun integerComparison() {
+        val actual = underTest.anInteger()
+
+        assertThat(actual).isGreaterThan(0)
+    }
+
+    @Test
     fun equalStrings() {
         val expected = "a string"
 
@@ -67,6 +74,13 @@ class AssertjTest {
         val actual = underTest.anInteger()
 
         assertThat(actual).isEqualTo(expected)
+    }
+
+    @Test
+    fun failingIntegerComparison() {
+        val actual = underTest.anInteger()
+
+        assertThat(actual).isLessThan(0)
     }
 
     @Test

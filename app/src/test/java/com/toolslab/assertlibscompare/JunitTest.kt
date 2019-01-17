@@ -1,7 +1,6 @@
 package com.toolslab.assertlibscompare
 
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotEquals
+import org.junit.Assert.*
 import org.junit.Test
 
 class JunitTest {
@@ -15,6 +14,13 @@ class JunitTest {
         val actual = underTest.anInteger()
 
         assertEquals(expected, actual)
+    }
+
+    @Test
+    fun integerComparison() {
+        val actual = underTest.anInteger()
+
+        assertTrue(actual > 0)
     }
 
     @Test
@@ -70,6 +76,13 @@ class JunitTest {
         val actual = underTest.anInteger()
 
         assertEquals(expected, actual)
+    }
+
+    @Test
+    fun failingIntegerComparison() {
+        val actual = underTest.anInteger()
+
+        assertTrue(actual < 0)
     }
 
     @Test

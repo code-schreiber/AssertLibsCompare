@@ -1,5 +1,7 @@
 package com.toolslab.assertlibscompare
 
+import io.kotlintest.matchers.numerics.shouldBeGreaterThan
+import io.kotlintest.matchers.numerics.shouldBeLessThan
 import io.kotlintest.shouldBe
 import io.kotlintest.shouldNotBe
 import org.junit.Test
@@ -15,6 +17,13 @@ class KotlinTest {
         val actual = underTest.anInteger()
 
         actual shouldBe expected
+    }
+
+    @Test
+    fun integerComparison() {
+        val actual = underTest.anInteger()
+
+        actual shouldBeGreaterThan 0
     }
 
     @Test
@@ -70,6 +79,13 @@ class KotlinTest {
         val actual = underTest.anInteger()
 
         actual shouldBe expected
+    }
+
+    @Test
+    fun failingIntegerComparison() {
+        val actual = underTest.anInteger()
+
+        actual shouldBeLessThan 0
     }
 
     @Test

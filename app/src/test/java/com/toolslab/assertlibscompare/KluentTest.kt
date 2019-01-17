@@ -1,5 +1,7 @@
 package com.toolslab.assertlibscompare
 
+import org.amshove.kluent.shouldBeGreaterThan
+import org.amshove.kluent.shouldBeLessThan
 import org.amshove.kluent.shouldEqual
 import org.amshove.kluent.shouldNotEqual
 import org.junit.Test
@@ -15,6 +17,13 @@ class KluentTest {
         val actual = underTest.anInteger()
 
         actual shouldEqual expected
+    }
+
+    @Test
+    fun integerComparison() {
+        val actual = underTest.anInteger()
+
+        actual shouldBeGreaterThan 0
     }
 
     @Test
@@ -70,6 +79,13 @@ class KluentTest {
         val actual = underTest.anInteger()
 
         actual shouldEqual expected
+    }
+
+    @Test
+    fun failingIntegerComparison() {
+        val actual = underTest.anInteger()
+
+        actual shouldBeLessThan 0
     }
 
     @Test

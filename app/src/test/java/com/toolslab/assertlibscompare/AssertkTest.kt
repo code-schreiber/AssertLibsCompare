@@ -1,9 +1,7 @@
 package com.toolslab.assertlibscompare
 
 import assertk.assert
-import assertk.assertions.isEqualTo
-import assertk.assertions.isNotNull
-import assertk.assertions.isNull
+import assertk.assertions.*
 import org.junit.Test
 
 class AssertkTest {
@@ -17,6 +15,13 @@ class AssertkTest {
         val actual = underTest.anInteger()
 
         assert(actual).isEqualTo(expected)
+    }
+
+    @Test
+    fun integerComparison() {
+        val actual = underTest.anInteger()
+
+        assert(actual).isGreaterThan(0)
     }
 
     @Test
@@ -72,6 +77,13 @@ class AssertkTest {
         val actual = underTest.anInteger()
 
         assert(actual).isEqualTo(expected)
+    }
+
+    @Test
+    fun failingIntegerComparison() {
+        val actual = underTest.anInteger()
+
+        assert(actual).isLessThan(0)
     }
 
     @Test

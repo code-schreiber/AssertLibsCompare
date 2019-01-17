@@ -2,9 +2,7 @@ package com.toolslab.assertlibscompare
 
 import org.junit.Test
 import strikt.api.expectThat
-import strikt.assertions.isEqualTo
-import strikt.assertions.isNotNull
-import strikt.assertions.isSameInstanceAs
+import strikt.assertions.*
 
 class StriktTest {
 
@@ -17,6 +15,13 @@ class StriktTest {
         val actual = underTest.anInteger()
 
         expectThat(actual).isEqualTo(expected)
+    }
+
+    @Test
+    fun integerComparison() {
+        val actual = underTest.anInteger()
+
+        expectThat(actual).isGreaterThan(0)
     }
 
     @Test
@@ -70,6 +75,13 @@ class StriktTest {
         val actual = underTest.anInteger()
 
         expectThat(actual).isEqualTo(expected)
+    }
+
+    @Test
+    fun failingIntegerComparison() {
+        val actual = underTest.anInteger()
+
+        expectThat(actual).isLessThan(0)
     }
 
     @Test
